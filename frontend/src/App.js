@@ -18,7 +18,7 @@ function App() {
     setError(null);
     
     try {
-      const response = await fetch(`http://localhost:5000/api/weather?city=${cityName}`);
+      const response = await fetch(`https://weather-afford.onrender.com/api/weather?city=${cityName}`);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.details || 'Failed to fetch weather data');
