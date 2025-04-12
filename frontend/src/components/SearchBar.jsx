@@ -37,7 +37,7 @@ function SearchBar({ setWeather, setForecast, setError, setLoading }) {
     setError("");
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/weather?city=${city}`
+        `https://weather-afford.onrender.com/api/weather?city=${city}`
       );
       setWeather(response.data.weather);
       setForecast(response.data.forecast);
